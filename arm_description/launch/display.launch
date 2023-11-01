@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>    
+
+    <arg name="robot_name" default="arm"/>
+
+    <arg name="hardware_interface" default="PositionJointInterface"/>
+
+    <arg name="rvizconfig" default="$(find arm_description)/config.rviz" />
+
+    <arg name="origin_xyz" default="'0 0 0'"/> 
+    <arg name="origin_rpy" default="'0 0 0'"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find arm_description)/urdf/arm.urdf.xacro' hardware_interface:=$(arg hardware_interface) robot_name:=$(arg robot_name) origin_xyz:=$(arg origin_xyz) origin_rpy:=$(arg origin_rpy)"/>
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+
+</launch>
