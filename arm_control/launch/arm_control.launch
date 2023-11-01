@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="hardware_interface" default="PositionJointInterface"/>
+    <arg name="robot_name" default="arm" />
+    <arg name="joint_state_frequency" default="100" />
+    <arg name="robot_state_frequency" default="100" />
+    <arg name="controllers" default="joint_state_controller joint_position_controller"/>
+
+    <rosparam file="$(find arm_control)/config/arm_control.yaml" command="load" /> 
+    <param name="/$(arg robot_name)/joint_state_controller/publish_rate" value="$(arg joint_state_frequency)" />
+
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" 
+        output="screen" args="$(arg controllers)" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+          respawn="false" output="screen">
+        <remap from="/joint_states" to="/$(arg robot_name)/joint_states" />
+        <param name="publish_frequency" value="$(arg robot_state_frequency)" />
+    </node>
+
+</launch>

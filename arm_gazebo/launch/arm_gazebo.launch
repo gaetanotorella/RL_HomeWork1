@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="hardware_interface" default="PositionJointInterface" />
+    <arg name="robot_name" default="arm" />
+
+
+    <include file="$(find arm_gazebo)/launch/arm_world.launch">
+        <arg name="hardware_interface" value="$(arg hardware_interface)" />
+        <arg name="robot_name" value="$(arg robot_name)" />
+    </include>
+
+<group ns = "$(arg robot_name)">
+    <include file="$(find arm_control)/launch/arm_control.launch">
+        <arg name="hardware_interface" value="$(arg hardware_interface)" />
+        <arg name="controllers" value="joint_state_controller 
+            $(arg hardware_interface)_J1_controller
+            $(arg hardware_interface)_J2_controller
+            $(arg hardware_interface)_J3_controller
+            $(arg hardware_interface)_J4_controller"/>
+        <arg name="robot_name" value="$(arg robot_name)" />
+    </include>
+</group>
+
+</launch> 
