@@ -1,24 +1,24 @@
-# Controllo di un Robot Manipolatore a 4 gradi di libertà con ROS
+# Control of a 4-degree-of-freedom Robot Manipulator with ROS
 
-Questo progetto si concentra sul controllo di un braccio robotico utilizzando il **Robot Operating System (ROS)** su ambiente Linux, con l'ausilio di **RViz** e **Gazebo**.
-L'obiettivo principale è quello di sviluppare dei pacchetti ROS in grado di controllare il movimento del braccio robotico in modo preciso e affidabile utilizzando la potenza e la flessibilità fornite da ROS.
+This project focuses on the control of a robotic arm using the **Robot Operating System (ROS)** on a Linux environment, with the help of **RViz** and **Gazebo**.
+The main goal is to develop ROS packages that can control the movement of the robotic arm precisely and reliably using the power and flexibility provided by ROS.
 
 
-## Descrizione del Progetto
-<img align="left" width="200"  src="https://github.com/gaetanotorella/HomeWork1/assets/92510009/32803be0-5486-427a-a977-d16d619e0233" />
-Il braccio robotico è composto da una serie di giunti motorizzati che consentono di muovere il braccio in diverse direzioni. 
-Utilizzando **ROS**, **RViz** e **Gazebo**, è possibile simulare e controllare il braccio robotico in un ambiente virtuale prima di implementarlo su un sistema hardware reale. 
-Il progetto include l'implementazione di nodi ROS per la comunicazione, l'interfacciamento con i motori, la gestione dei sensori e l'implementazione di algoritmi di controllo.
+## Project Description
+<img align="left" width="200" src="https://github.com/gaetanotorella/HomeWork1/assets/92510009/32803be0-5486-427a-a977-d16d619e0233" />
+The robotic arm consists of a series of motorised joints that allow the arm to move in different directions. 
+Using **ROS**, **RViz** and **Gazebo**, it is possible to simulate and control the robotic arm in a virtual environment before implementing it on a real hardware system. 
+The project includes the implementation of ROS nodes for communication, motor interfacing, sensor management and the implementation of control algorithms.
 
 <br /><br /><br /><br /><br /><br /><br />
   
-## Obiettivi
+## Objectives
 
-- Utilizzare **ROS** come framework principale per la gestione del braccio robotico.
-- Simulare il braccio robotico utilizzando **Gazebo** per testare e validare il controllo in un ambiente virtuale.
-- Utilizzare **RViz** per visualizzare e monitorare lo stato del braccio robotico durante il funzionamento.
-- Implementare nodi **ROS** per il controllo del movimento del braccio e la gestione dei sensori e della camera.
-- Ottimizzare gli algoritmi di controllo per garantire una risposta rapida e affidabile ai comandi.
+- Use **ROS** as the main framework for managing the robotic arm.
+- Simulate the robotic arm using **Gazebo** to test and validate the control in a virtual environment.
+- Use **RViz** to visualise and monitor the status of the robotic arm during operation.
+- Implement **ROS** nodes to control the movement of the arm and manage the sensors and camera.
+- Optimise control algorithms to ensure fast and reliable response to commands.
 
 <img src="https://github.com/gaetanotorella/HomeWork1/assets/92510009/b45a9fa2-561f-42a3-8eab-3d94d995d3de" width="200" />
 <img src="https://github.com/gaetanotorella/HomeWork1/assets/92510009/3f913aba-c0b6-46e6-a5bf-702e3200052b" width="200" />
@@ -26,12 +26,12 @@ Il progetto include l'implementazione di nodi ROS per la comunicazione, l'interf
 <img src="https://github.com/gaetanotorella/HomeWork1/assets/92510009/cda330ef-b0cb-40ba-9e3a-f824a9cfc84f" width="200" />
 
 
-## Componenti Principali
+## Main Components
 
 - **ROS** (Robot Operating System)
-- **Gazebo** (simulatore di robotica 3D)
-- **RViz** (strumento di visualizzazione 3D per ROS)
+- **Gazebo** (3D robotics simulator)
+- **RViz** (3D visualisation tool for ROS)
 
-## Linguaggi e Strumenti
+## Languages and Tools
 
-Il progetto è stato implementato utilizzando principalmente **C++** e **Python** all'interno dell'ambiente **ROS**. Gli strumenti utilizzati includono **Visual Studio Code** per lo sviluppo del codice, **Gazebo** per la simulazione e **RViz** per la visualizzazione dei dati.
+The project was implemented using mainly **C++** and **Python** within the **ROS** environment. The tools used include **Visual Studio Code** for code development, **Gazebo** for simulation and **RViz** for data visualisation.
